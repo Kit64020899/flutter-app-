@@ -1,0 +1,101 @@
+import 'package:flutter/material.dart';
+
+class Login extends StatelessWidget {
+  const Login({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "Flutter Application",
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: Scaffold(
+        body: SingleChildScrollView(
+          child: Center(
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 30),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  SizedBox(height: 40),
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Image.asset(
+                      'assets/Images/university.png',
+                      height: 150, // ปรับขนาดของภาพตามต้องการ
+                    ),
+                  ),
+                  const SizedBox(height: 10), // Add some space
+                  const Text(
+                    "BluetoothClass Tracking",
+                    style: TextStyle(
+                      fontSize: 27,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 0, 4, 7),
+                    ),
+                  ),
+                  const SizedBox(height: 30), // Add some space
+                  const Text(
+                    "ล็อกอินเพื่อเข้าสู่ระบบ",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 23,
+                      color: Color.fromARGB(255, 0, 4, 7),
+                    ),
+                  ),
+                  SizedBox(height: 40), // Add some space
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(bottom: 20.0), // Adjusted padding
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          bottom: 10.0), // Adjusted padding
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          labelText: "อีเมล",
+                          border: OutlineInputBorder(),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10), // Add some space
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(bottom: 10.0), // Adjusted padding
+                    child: const TextField(
+                      obscureText: true,
+                      decoration: InputDecoration(
+                        labelText: "รหัสผ่าน",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                  ElevatedButton(
+                    onPressed: () {},
+                    style: ElevatedButton.styleFrom(
+                      primary: Color.fromARGB(255, 106, 9,
+                          108), // Set the background color of the button
+                      onPrimary: Colors
+                          .white, // Set the text color of the button when pressed
+                      elevation: 5,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      textStyle: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                      ),
+                    ),
+                    child: Text('เข้าสู่ระบบ'),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
